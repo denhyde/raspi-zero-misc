@@ -1,3 +1,10 @@
+# The scripts involving the 15-LED strand
+# will only work when executed with sudo.
+# NeoPixel library is installed via pip with sudo:
+# sudo pip3 install rpi_ws281x
+# sudo pip3 install adafruit-circuitpython-neopixel
+# sudo python3 -m pip install --force-reinstall adafruit-blinka
+
 # Imports
 import board
 from neopixel import NeoPixel
@@ -6,7 +13,7 @@ import time
 # LED details
 LEDcount = 15
 
-# Define the strand pin number and number of LEDs from variables
+# Define the strand pin number (P21) and number of LEDs
 strand = NeoPixel(board.D21, LEDcount)
 
 # Colour variables
